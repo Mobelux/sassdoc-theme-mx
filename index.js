@@ -1,55 +1,16 @@
-/**
- * Themeleon template helper, using consolidate.js module.
- *
- * See <https://github.com/themeleon/themeleon>.
- * See <https://github.com/tj/consolidate.js>.
- */
 var themeleon = require('themeleon')().use('consolidate');
-
-/**
- * Utility function we will use to merge a default configuration
- * with the user object.
- */
+var swig = new require('swig');
+var swigExtras = require('swig-extras');
 var extend = require('extend');
-
-/**
- * SassDoc extras (providing Markdown and other filters, and different way to
- * index SassDoc data).
- *
- * See <https://github.com/SassDoc/sassdoc-extras>.
- */
 var extras = require('sassdoc-extras');
 
-/**
- * The theme function. You can directly export it like this:
- *
- *     module.exports = themeleon(__dirname, function (t) {});
- *
- * ... but here we want more control on the template variables, so there
- * is a little bit of preprocessing below.
- *
- * The theme function describes the steps to render the theme.
- */
+swigExtras.useFilter(swig, 'split');
+swigExtras.useFilter(swig, 'trim');
+swigExtras.useFilter(swig, 'groupby');
+
 var theme = themeleon(__dirname, function (t) {
-  /**
-   * Copy the assets folder from the theme's directory in the
-   * destination directory.
-   */
   t.copy('assets');
-
-  var options = {
-    partials: {
-      // Add your partial files here.
-      // foo: 'views/foo.handlebars',
-      // 'foo/bar': 'views/foo/bar.handlebars',
-    },
-  };
-
-  /**
-   * Render `views/index.handlebars` with the theme's context (`ctx` below)
-   * as `index.html` in the destination directory.
-   */
-  t.handlebars('views/index.handlebars', 'index.html', options);
+  t.swig('views/index.swig', 'index.html');
 });
 
 /**
@@ -66,9 +27,6 @@ module.exports = function (dest, ctx) {
       access: ['public', 'private'],
       alias: false,
       watermark: true,
-    },
-    groups: {
-      'undefined': 'General',
     },
     'shortcutIcon': 'http://sass-lang.com/favicon.ico',
   };
@@ -142,11 +100,6 @@ module.exports = function (dest, ctx) {
    * templates to manipulate the indexed object.
    */
   ctx.data.byGroupAndType = extras.byGroupAndType(ctx.data);
-
-  // Avoid key collision with Handlebars default `data`.
-  // @see https://github.com/SassDoc/generator-sassdoc-theme/issues/22
-  ctx._data = ctx.data;
-  delete ctx.data;
 
   /**
    * Now we have prepared the data, we can proxy to the Themeleon

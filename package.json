@@ -9,6 +9,8 @@
     "extend": "^1.0.0",
     "handlebars": "^4.0.5",
     "sassdoc-extras": "^2.0.0",
+    "swig": "1.4.0",
+    "swig-extras": "0.*",
     "themeleon": "^3.0.0"
   },
   "engines": {
