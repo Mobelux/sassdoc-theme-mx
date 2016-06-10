@@ -1,7 +1,7 @@
 {
   "generator-sassdoc-theme": {
     "themeName": "mx",
-    "themeEngine": "handlebars",
+    "themeEngine": "swig",
     "author": {
       "name": "Joey Figaro"
     },

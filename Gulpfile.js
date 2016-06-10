@@ -122,7 +122,7 @@ gulp.task('dumpCSS', ['styles'], function () {
 gulp.task('develop', ['compile', 'styles', 'browser-sync'], function () {
   gulp.watch('scss/**/*.scss', ['styles', 'dumpCSS']);
   gulp.watch('assets/js/**/*.js', ['dumpJS']);
-  gulp.watch('views/**/*.+{handlebars|hbs}', ['compile']);
+  gulp.watch('views/**/*.swig', ['compile']);
 });
 
 
