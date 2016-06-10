@@ -32,8 +32,5 @@
         {% endif %}
       {% endfor %}
     {% endfor %}
-    <footer class="footer">
-      {% include "partials/footer.swig" %}
-    </footer>
   </section>
 {% endblock %}
