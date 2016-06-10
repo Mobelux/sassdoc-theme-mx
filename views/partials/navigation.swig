@@ -1,13 +1,12 @@
 
 <nav class="side-nav">
   <ul class="social">
-    <li><a class="github" href="{{ view.links.github }}">GitHub / Install</a></li>
-    <li><a class="twitter" href="{{ view.links.twitter }}">Twitter</a></li>
-    <li><a class="gitter" href="{{ view.links.gitter }}">Gitter</a></li>
+    <li><a class="github" href="http://github.com/mobelux/sassdoc-theme-mx">GitHub / Install</a></li>
+    <li><a class="twitter" href="http://twitter.com/mobelux">Twitter</a></li>
   </ul>
 
-  <a class="logo-container" href="{{ view.library.homepage }}">
-    <img alt="{{ view.library.name }} Logo" class="logo" src="{{ view.logoPath }}">
+  <a class="logo-container" href="/styleguide">
+    <img alt="{{ view.library.name }} Logo" class="logo" src="../../assets/img/logo.png">
   </a>
 
   <ul class="list">
