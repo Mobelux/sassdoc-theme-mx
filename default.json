@@ -18,7 +18,5 @@
         "components": "Components",
         "utilities": "Utilities"
     },
-    "autofill": [
-        "require"
-    ]}
+    "autofill": [ "require" ]
 }
