@@ -1,37 +1,40 @@
 {
-  "name": "mx",
-  "description": "A fancy new SassDoc theme.",
-  "version": "0.1.0",
+  "name": "sassdoc-theme-default",
+  "description": "SassDoc's default theme",
+  "title": "SassDoc Default Theme",
+  "author": "SassDoc team",
+  "version": "2.4.3",
   "keywords": [
     "sassdoc-theme"
   ],
+  "repository": {
+    "type": "git",
+    "url": "https://github.com/SassDoc/sassdoc-theme-default.git"
+  },
+  "files": [
+    "assets",
+    "views",
+    "dist",
+    "default.json",
+    "index.js",
+    "LICENSE.md",
+    "README.md"
+  ],
+  "main": "dist",
   "dependencies": {
-    "extend": "^1.0.0",
-    "sassdoc-extras": "^2.0.0",
-    "swig": "1.4.0",
-    "swig-extras": "0.*",
-    "themeleon": "^3.0.0"
-  },
-  "engines": {
-    "node": ">=0.10.0"
-  },
-  "devDependencies": {
     "chroma-js": "^0.6.3",
-    "autoprefixer-core": "^6.0.1",
-    "bluebird": "^3.4.0",
-    "browser-sync": "^2.13.0",
     "es6-denodeify": "^0.1.0",
     "es6-promise": "^2.0.1",
-    "fs-extra": "^0.30.0",
-    "gulp": "^3.9.1",
-    "gulp-cached": "^1.1.0",
-    "gulp-imagemin": "^3.0.1",
-    "gulp-postcss": "^6.1.1",
-    "gulp-rename": "^1.2.2",
-    "gulp-sass": "^2.3.1",
-    "gulp-uglify": "^1.5.3",
-    "gulp-util": "^3.0.7",
-    "imagemin-pngcrush": "^5.0.0",
-    "sassdoc": "^2.1.20"
+    "extend": "^2.0.0",
+    "fs-extra": "^0.16.3",
+    "html-minifier": "^0.7.0",
+    "sassdoc-extras": "^2.4.0",
+    "swig": "1.4.0",
+    "swig-extras": "^0.0.1"
+  },
+  "devDependencies": {
+    "babel": "^4.4.0",
+    "jshint": "^2.6.0",
+    "uglify-js": "^2.4.15"
   }
 }
