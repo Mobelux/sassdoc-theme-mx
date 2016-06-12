@@ -1,16 +1,24 @@
 {
-  "display": {
-    "annotations": {
-      "function": ["description", "parameter", "return", "example", "throw", "require", "usedby", "since", "see", "todo", "link", "author"],
-      "mixin": ["description", "parameter", "content", "output", "example", "throw", "require", "usedby", "since", "see", "todo", "link", "author"],
-      "placeholder": ["description", "example", "throw", "require", "usedby", "since", "see", "todo", "link", "author"],
-      "variable": ["description", "type", "property", "require", "example", "usedby", "since", "see", "todo", "link", "author"]
+    "theme": "./new-project/templates/sassdoc-theme-mx",
+    "dest": "./new-project/templates/styleguide",
+    "verbose": true,
+    "display": {
+        "access": ["private"],
+        "alias": true,
+        "watermark": true
     },
-    "access": ["public", "private"],
-    "alias": false,
-    "watermark": true
-  },
-  "groups": {
-    "undefined": "General"
-  }
+    "googleAnalytics": "",
+    "groups": {
+        "undefined": "General",
+        "helpers": "Helpers",
+        "typography": "Typography",
+        "mixins": "Mixins",
+        "layout": "Layout",
+        "pages": "Pages",
+        "components": "Components",
+        "utilities": "Utilities"
+    },
+    "autofill": [
+        "require"
+    ]}
 }
